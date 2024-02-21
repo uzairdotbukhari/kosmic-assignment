@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply mx-auto; /* Center the element horizontally */
+}
+
+@screen sm {
+  .wrapper {
+    max-width: theme('screens.sm'); /* Use custom value from config for 'sm' breakpoint */
+  }
+}
+
+@screen md {
+  .wrapper {
+    max-width: theme('screens.md'); /* Use custom value from config for 'md' breakpoint */
+  }
+}
+
+@screen lg {
+  .wrapper {
+    max-width: theme('screens.lg'); /* Use custom value from config for 'lg' breakpoint */
+  }
+}
+
+@screen xl {
+  .wrapper {
+    max-width: theme('screens.xl'); /* Use custom value from config for 'xl' breakpoint */
+  }
+}
+
