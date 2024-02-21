@@ -41,11 +41,7 @@ const SliderElement: React.FC<ISliderElementProps> = ({
   };
 
   return (
-    <Box
-      className={`${className ?? ""} ${
-        disabled ? "opacity-5" : ""
-      } my-8`}
-    >
+    <Box className={`${className ?? ""} ${disabled ? "opacity-5" : ""} my-8`}>
       {title ? (
         <FormLabel
           id="demo-radio-buttons-group-label"
@@ -74,26 +70,27 @@ const SliderElement: React.FC<ISliderElementProps> = ({
               onChange={(e, value) => {
                 field.onChange(e);
                 if (onChange) {
-                  onChange(value)
+                  onChange(value);
                 }
               }}
               marks={[
                 {
-                    value: 100,
-                    label: "100",
+                  value: 100,
+                  label: "100",
                 },
                 {
-                    value: 1000,
-                    label: "1000",
-                }
+                  value: 1000,
+                  label: "1000",
+                },
               ]}
               sx={{
                 color: "#000000",
                 margin: "auto",
                 "& .MuiSlider-track": {
                   backgroundColor: "bg-gray-300",
-                  backgroundImage: "linear-gradient(to right, #6546db, #ff7dff)",
-                  border: 0
+                  backgroundImage:
+                    "linear-gradient(to right, #6546db, #ff7dff)",
+                  border: 0,
                 },
                 "& .MuiSlider-thumb": {
                   backgroundColor: "#d53a9d",

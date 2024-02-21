@@ -88,7 +88,9 @@ const MediaManagement = () => {
           </div>
           <Button type="submit">Click to Log Data</Button>
         </form>
-        {data ? <code className="text-yellow-500">{JSON.stringify(data)}</code> : null}
+        {data ? (
+          <code className="text-yellow-500">{JSON.stringify(data)}</code>
+        ) : null}
       </div>
     </div>
   );
